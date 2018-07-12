@@ -36,7 +36,7 @@ class JUnitXmlFormatter(base.BaseFormatter):
     # Add a dummy test if no error found
     def finished(self, filename):
         if len(self.test_suites[filename].test_cases) == 0:
-            dummy_case = TestCase("Check passed", file=filename)
+            dummy_case = TestCase("flake8 check passed", file=filename)
             self.test_suites[filename].test_cases.append(dummy_case)
 
     # sort to generate a stable output
